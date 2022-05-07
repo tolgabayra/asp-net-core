@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hoşgeldiniz</h1>
+    <p>Bayrak Dans Kursu</p>
+</div>
+<style>
+    /*----  Main Style  ----*/
+    #cards_landscape_wrap-2{
+      text-align: center;
+      background: #F7F7F7;
+    }
+    #cards_landscape_wrap-2 .container{
+      padding-top: 80px; 
+      padding-bottom: 100px;
+    }
+    #cards_landscape_wrap-2 a{
+      text-decoration: none;
+      outline: none;
+    }
+    #cards_landscape_wrap-2 .card-flyer {
+      border-radius: 5px;
+    }
+    #cards_landscape_wrap-2 .card-flyer .image-box{
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+      border-radius: 5px;
+    }
+    #cards_landscape_wrap-2 .card-flyer .image-box img{
+      -webkit-transition:all .9s ease; 
+      -moz-transition:all .9s ease; 
+      -o-transition:all .9s ease;
+      -ms-transition:all .9s ease; 
+      width: 100%;
+      height: 200px;
+    }
+    #cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+      opacity: 0.7;
+      -webkit-transform:scale(1.15);
+      -moz-transform:scale(1.15);
+      -ms-transform:scale(1.15);
+      -o-transform:scale(1.15);
+      transform:scale(1.15);
+    }
+    #cards_landscape_wrap-2 .card-flyer .text-box{
+      text-align: center;
+    }
+    #cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+      padding: 30px 18px;
+    }
+    #cards_landscape_wrap-2 .card-flyer{
+      background: #FFFFFF;
+      margin-top: 50px;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    }
+    #cards_landscape_wrap-2 .card-flyer:hover{
+      background: #fff;
+      box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      margin-top: 50px;
+    }
+    #cards_landscape_wrap-2 .card-flyer .text-box p{
+      margin-top: 10px;
+      margin-bottom: 0px;
+      padding-bottom: 0px; 
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #000000;
+    }
+    #cards_landscape_wrap-2 .card-flyer .text-box h6{
+      margin-top: 0px;
+      margin-bottom: 4px; 
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Roboto Black', sans-serif;
+      letter-spacing: 1px;
+      color: #00acc1;
+    }
+</style>
+
+       <!-- Topic Cards -->
+    <div id="cards_landscape_wrap-2">
+        <div class="container">
+            <h3>Popüler Kuslar</h3>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a href="">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="assets/img/B332C164-6FBA-40DC-910B-24F61269119E.jpeg" alt=""/>
+                                </div>
+                                <div class="text-container">
+                                    <h6>Zumba ve Yoga</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a href="">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="https://pixabay.com/get/g21bccd7370158f7b184baa869c8b8f463237b6987e9b9d34cf74ba29b328ad5c3751b2a5c6b8942f670fabea155d4fe7e44e2647dbc4e4e9a006e879fbecd1a595e706cec425cfa544c6cabbf2444609_1920.jpg" alt=""/>
+                                </div>
+                                <div class="text-container">
+                                    <h6>Bale</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a href="">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="https://pixabay.com/get/geb068515ad0ca2c9bf12b4ea9d48abb317c57594177fdfb24ad6b3df6a041fc99cd55205bc2def5889a02b3b8335d3c8b83de516e66b862a7760461deff85fda597f4cdbb81955f7de9cb101c1eae580_1920.jpg" alt=""/>
+                                </div>
+
+                                <div class="text-container">
+                                    <h6>Tango</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <a href="">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="https://pixabay.com/get/g09438226ec13f971b4d6eac22801bd19a55ed8d05b26c97c10c7002ed8732731ffaac85f0ae416e2f7a6dc6e82d88a4717cfbc7d8edff1724d1f3f05415fb52d6f13cd25ae03f99c50f22de138bd3dd9_1920.jpg" alt=""/>
+                                </div>
+                                <div class="text-container">
+                                    <h6>Yöresel</h6>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                                    <div class="card mt-5">
+                                        <div class="social-graph-wrapper widget-facebook">
+                                            <span class="s-icon"><i class="fa fa-facebook fa-1x"></i></span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 border-right">
+                                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                                    <h4 class="m-1">108k</h4>
+                                                    <p class="m-0">Friends</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-6">
+                                                <div class="pt-3 pb-3 pl-0 pr-0 text-center">
+                                                    <h4 class="m-1">209k</h4>
+                                                    <p class="m-0">Followers</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        </div>
+    </div>
+
+
