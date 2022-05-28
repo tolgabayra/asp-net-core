@@ -1,0 +1,37 @@
+@model InternetProgramlamaFinal.Models.Egitmenler
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Egitmenler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EgitmenAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EgitmenAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EgitmenFoto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EgitmenFoto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KursId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KursId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EgitmenId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

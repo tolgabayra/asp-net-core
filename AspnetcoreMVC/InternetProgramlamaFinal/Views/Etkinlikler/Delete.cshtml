@@ -1,0 +1,40 @@
+@model InternetProgramlamaFinal.Models.Etkinlikler
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1>Etkinlik Sil</h1>
+
+<h3>Silmek istediğinizden Emin Misiniz?</h3>
+<div>
+    <h4>Etkinlikler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EtkinlikAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EtkinlikAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EtkinlikZamani)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EtkinlikZamani)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalonId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalonId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="EtkinlikId" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Geri Dön</a>
+    </form>
+</div>

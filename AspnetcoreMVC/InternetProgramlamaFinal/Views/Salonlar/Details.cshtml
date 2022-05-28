@@ -1,0 +1,31 @@
+@model InternetProgramlamaFinal.Models.Salonlar
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Salonlar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalonAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalonAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalonKonumu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalonKonumu)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SalonId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

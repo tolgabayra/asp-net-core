@@ -1,0 +1,37 @@
+@model InternetProgramlamaFinal.Models.Etkinlikler
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>Etkinlikler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EtkinlikAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EtkinlikAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EtkinlikZamani)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EtkinlikZamani)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Salonlars.SalonAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Salonlars.SalonAdi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EtkinlikId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

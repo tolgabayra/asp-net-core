@@ -1,0 +1,65 @@
+@model IEnumerable<InternetProgramlamaFinal.Models.Uyeler>
+
+@{
+    ViewData["Title"] = "Uye Listesi";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1 class="p-1">Üye Listesi</h1>
+
+<p>
+    <a class="btn btn-secondary" asp-action="Create">Yeni Ekle</a>
+</p>
+<div class="card mb-4">
+    <div class="card-body">
+        <table class="table " id="datatablesSimple">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UyeAdi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UyeSoyadi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UyeTelefon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kurslars.KursAdi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Egitmenlers.EgitmenAdi)
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UyeAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UyeSoyadi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UyeTelefon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Kurslars.KursAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Egitmenlers.EgitmenAdi)
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary text-decoration-none p-2 rounded-lg" asp-action="Edit" asp-route-id="@item.UyeId">Düzenle</a> 
+                        <a class="btn btn-outline-success text-decoration-none p-2 rounded-lg" asp-action="Details" asp-route-id="@item.UyeId">Detaylar</a> 
+                        <a class="btn btn-outline-danger text-decoration-none p-2 rounded-lg" asp-action="Delete" asp-route-id="@item.UyeId">Sil</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+<a class="btn btn-info" href="/Home">Anasayfaya Dön</a>

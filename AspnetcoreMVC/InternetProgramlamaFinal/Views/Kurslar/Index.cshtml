@@ -1,0 +1,73 @@
+@model IEnumerable<InternetProgramlamaFinal.Models.Kurslar>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1 class="p-1">Kurs Listesi</h1>
+
+<p>
+    <a class="btn btn-secondary" asp-action="Create">Yeni Ekle</a>
+</p>
+<div class="card mb-4">
+    <div class="card-body">
+        <table class="table table-striped" id="datatablesSimple">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.KursAdi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KursAciklama)
+                </th>
+              
+                <th>
+                    @Html.DisplayNameFor(model => model.KursSeanslari)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KursFiyati)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salonlars.SalonAdi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EgitmenId)
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KursAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KursAciklama)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KursSeanslari)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KursFiyati)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salonlars.SalonAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EgitmenId)
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary text-decoration-none p-2 rounded-lg" asp-action="Edit" asp-route-id="@item.KursId">Düzenle</a> 
+                        <a class="btn btn-outline-success text-decoration-none p-2 rounded-lg" asp-action="Details" asp-route-id="@item.KursId">Detaylar</a> 
+                        <a class="btn btn-outline-danger text-decoration-none p-2 rounded-lg" asp-action="Delete" asp-route-id="@item.KursId">Sil</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+<a class="btn btn-info" href="/Home">Anasayfaya Dön</a>

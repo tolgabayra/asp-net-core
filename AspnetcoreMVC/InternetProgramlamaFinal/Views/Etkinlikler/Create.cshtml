@@ -1,0 +1,48 @@
+@model InternetProgramlamaFinal.Models.Etkinlikler
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1 class="text-danger">Etkinlik Oluştur</h1>
+
+<h4>Etkinlikler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EtkinlikAdi" class="control-label">Etkinlik Adı</label>
+                <input asp-for="EtkinlikAdi" class="form-control" />
+                <span asp-validation-for="EtkinlikAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EtkinlikZamani" class="control-label">Etkinlik Tarihi</label>
+                <input asp-for="EtkinlikZamani" class="form-control" />
+                <span asp-validation-for="EtkinlikZamani" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalonId" class="control-label">Salonlar</label>
+                @Html.DropDownListFor(x=>x.SalonId,(List<SelectListItem>)ViewBag.v1,new {@class = "form-control"})
+                <span asp-validation-for="SalonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ekle" class="btn btn-primary" />
+            </div>
+            
+        </form>
+    </div>
+    <div class="border-2 m-2 p-2">
+        <h6 class="text-danger">My Binder ;</h6>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye geri dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

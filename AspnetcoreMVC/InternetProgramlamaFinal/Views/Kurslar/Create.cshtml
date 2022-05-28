@@ -1,0 +1,60 @@
+@model InternetProgramlamaFinal.Models.Kurslar
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Kurslar</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="KursAdi" class="control-label"></label>
+                <input asp-for="KursAdi" class="form-control" />
+                <span asp-validation-for="KursAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KursAciklama" class="control-label"></label>
+                <input asp-for="KursAciklama" class="form-control" />
+                <span asp-validation-for="KursAciklama" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="KursSeanslari" class="control-label"></label>
+                <input asp-for="KursSeanslari" class="form-control" />
+                <span asp-validation-for="KursSeanslari" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KursFiyati" class="control-label"></label>
+                <input asp-for="KursFiyati" class="form-control" />
+                <span asp-validation-for="KursFiyati" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salonlars.SalonAdi" class="control-label"></label>
+                @Html.DropDownListFor(x=>x.SalonId,(List<SelectListItem>)ViewBag.v1,new {@class = "form-control"})
+                <span asp-validation-for="SalonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EgitmenId" class="control-label"></label>
+                @Html.DropDownListFor(x=>x.EgitmenId,(List<SelectListItem>)ViewBag.v2,new {@class = "form-control"})
+                <span asp-validation-for="EgitmenId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

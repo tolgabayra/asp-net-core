@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.16" />
+      <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.16" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.16">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Uyeler\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uyeler\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uyeler\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uyeler\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uyeler\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Kurslar\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Kurslar\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Kurslar\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Kurslar\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Kurslar\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Egitmenler\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Egitmenler\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Egitmenler\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Egitmenler\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Egitmenler\Index.cshtml" />
+    </ItemGroup>
+
+</Project>
