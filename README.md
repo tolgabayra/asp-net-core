@@ -1,2 +1,2 @@
-# asp-net-core
-Aspnet Core MVC = POSTGRESQL 
+# Dance Gym App
+Aspnet Core MVC - POSTGRESQL 
